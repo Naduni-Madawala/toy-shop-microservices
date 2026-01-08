@@ -3,126 +3,126 @@ db = db.getSiblingDB("toyshop");
 db.products.insertMany([
   // 🚗 MODEL CARS (7)
   {
-    name: "Ferrari F40",
+    name: "Ferrari SF-24 Diecast Model Car 2024 Formula 1",
     category: "cars",
     price: 4500,
-    image: "ferrari.png"
+    image: "ferrari.jpg"
   },
   {
-    name: "Lamborghini Aventador",
+    name: "BMW i8 Modellauto Die Cast Spielzeug Model",
     category: "cars",
     price: 5200,
-    image: "lamborghini.png"
+    image: "BMW.jpg"
   },
   {
-    name: "Bugatti Chiron",
+    name: "Ford Mustang Shelby GT500 White with Blue Stripes ",
     category: "cars",
     price: 6800,
-    image: "bugatti.png"
+    image: "Mustang.jpg"
   },
   {
-    name: "Porsche 911",
+    name: "MINIATURA CARRO F1 REDBULL MAX VERSTAPPEN RB19",
     category: "cars",
     price: 4800,
-    image: "porsche.png"
+    image: "redbull.jpg"
   },
   {
-    name: "McLaren P1",
+    name: "Jaguar - E-Type 3.8 Coupe I-Series 1961 black",
     category: "cars",
     price: 6100,
-    image: "mclaren.png"
+    image: "jaguar.jpg"
   },
   {
-    name: "BMW M4",
+    name: "Mercedes AMG Petronas F1",
     category: "cars",
-    price: 3900,
-    image: "bmw.png"
+    price: 6900,
+    image: "mercedes.jpg"
   },
   {
-    name: "Audi R8",
+    name: "Classic Sculpted Model Car",
     category: "cars",
     price: 4300,
-    image: "audi.png"
+    image: "classic.jpg"
   },
 
   // 🎎 ANIME FIGURES (13)
   {
-    name: "Naruto Uzumaki",
-    category: "anime",
+    name: "Steve Harrington Funko Pop",
+    category: "figure",
     price: 3200,
-    image: "naruto.png"
+    image: "Steve.jpg"
   },
   {
-    name: "Sasuke Uchiha",
-    category: "anime",
+    name: "Stranger Things Pop! Nancy Wheeler with Shotgun",
+    category: "figure",
     price: 3400,
-    image: "sasuke.png"
+    image: "Nancy.jpg"
   },
   {
-    name: "Goku",
-    category: "anime",
+    name: "Funko Stranger Things Will (The Wise)",
+    category: "figure",
     price: 3600,
-    image: "goku.png"
+    image: "Will.jpg"
   },
   {
-    name: "Vegeta",
-    category: "anime",
+    name: "Stranger Things Demogorgon Pop! Vinyl Figure",
+    category: "figure",
     price: 3500,
-    image: "vegeta.png"
+    image: "Demogogans.jpg"
   },
   {
-    name: "Monkey D. Luffy",
-    category: "anime",
+    name: "Joyce funko",
+    category: "figure",
     price: 3300,
-    image: "luffy.png"
+    image: "Joyce.jpg"
   },
   {
-    name: "Roronoa Zoro",
-    category: "anime",
+    name: "Funko Pop! Stranger Things Season 5 - Eleven",
+    category: "figure",
     price: 3100,
-    image: "zoro.png"
+    image: "Elevan.jpg"
   },
   {
-    name: "Itachi Uchiha",
-    category: "anime",
+    name: "mike funko pop",
+    category: "figure",
     price: 3700,
-    image: "itachi.png"
+    image: "Mike.jpg"
   },
   {
-    name: "Mikasa Ackerman",
-    category: "anime",
+    name: "Max mayfield season 2 funko pop",
+    category: "figure",
     price: 3000,
-    image: "mikasa.png"
+    image: "Max.jpg"
   },
   {
-    name: "Levi Ackerman",
-    category: "anime",
+    name: "Funko Pop! TV: Stranger Things- Dustin ",
+    category: "figure",
     price: 3200,
-    image: "levi.png"
+    image: "Dustin.jpg"
   },
   {
-    name: "Tanjiro Kamado",
-    category: "anime",
+    name: "Robin season 2 funko pop",
+    category: "figure",
     price: 3100,
-    image: "tanjiro.png"
+    image: "Robin.jpg"
   },
   {
-    name: "Nezuko Kamado",
-    category: "anime",
+    name: "Stranger Things Vecna Pop! Vinyl Figure",
+    category: "figure",
     price: 3300,
-    image: "nezuko.png"
+    image: "Vecna.jpg"
   },
   {
-    name: "Satoru Gojo",
-    category: "anime",
+    name: "Hopper-Funko Pop",
+    category: "figure",
     price: 3800,
-    image: "gojo.png"
+    image: "Hopper.jpg"
   },
   {
-    name: "Eren Yeager",
-    category: "anime",
+    name: "Funko Pop! TV: Stranger Things- Lucas ",
+    category: "figure",
     price: 3400,
-    image: "eren.png"
+    image: "Lucas.jpg"
   }
 ]);
 
