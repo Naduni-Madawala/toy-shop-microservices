@@ -1,0 +1,14 @@
+{
+  "id": "/toyshop/shipping",
+  "cpus": 0.4,
+  "mem": 512,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "naduni/toy-shipping:latest",
+      "network": "BRIDGE",
+      "portMappings": [{ "containerPort": 8080, "hostPort": 0 }]
+    }
+  }
+}
