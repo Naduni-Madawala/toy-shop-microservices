@@ -7,7 +7,7 @@ BASE_URL = "http://web"
 PRODUCT_ENDPOINTS = [
     "/catalogue",
     "/catalogue/cars",
-    "/catalogue/anime"
+    "/catalogue/figure"
 ]
 
 def hit_endpoint(endpoint):
