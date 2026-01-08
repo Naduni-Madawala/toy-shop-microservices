@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: catalogue
 spec:
-  replicas: {{ .Values.cart.replicas }}
+  replicas: {{ .Values.catalogue.replicas }}
   selector:
     matchLabels:
       app: catalogue
@@ -17,3 +17,4 @@ spec:
         image: "{{ .Values.catalogue.image }}:{{ .Values.catalogue.tag }}"
         ports:
         - containerPort: 8080
+
