@@ -1,1 +1,17 @@
+{
+  "id": "/toyshop/dispatch",
+  "cpus": 0.2,
+  "mem": 256,
+  "instances": 1,
+  "env": {
+    "RABBITMQ_HOST": "rabbitmq"
+  },
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "naduni/toy-dispatch:latest",
+      "network": "BRIDGE"
+    }
+  }
+}
 
