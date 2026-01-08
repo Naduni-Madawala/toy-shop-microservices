@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: user
 spec:
-  replicas: {{ .Values.cart.replicas }}
+  replicas: {{ .Values.user.replicas }}
   selector:
     matchLabels:
       app: user
@@ -17,3 +17,4 @@ spec:
         image: "{{ .Values.user.image }}:{{ .Values.user.tag }}"
         ports:
         - containerPort: 8080
+
