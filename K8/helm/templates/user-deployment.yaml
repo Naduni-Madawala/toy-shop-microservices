@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user
+spec:
+  replicas: {{ .Values.cart.replicas }}
+  selector:
+    matchLabels:
+      app: user
+  template:
+    metadata:
+      labels:
+        app: user
+    spec:
+      containers:
+      - name: user
+        image: "{{ .Values.user.image }}:{{ .Values.user.tag }}"
+        ports:
+        - containerPort: 8080
