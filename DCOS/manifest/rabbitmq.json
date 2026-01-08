@@ -1,0 +1,17 @@
+{
+  "id": "/toyshop/rabbitmq",
+  "cpus": 0.4,
+  "mem": 512,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "rabbitmq:3-management",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 5672, "hostPort": 0 },
+        { "containerPort": 15672, "hostPort": 0 }
+      ]
+    }
+  }
+}
