@@ -1,1 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dispatch
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dispatch
+  template:
+    metadata:
+      labels:
+        app: dispatch
+    spec:
+      containers:
+      - name: dispatch
+        image: "{{ .Values.dispatch.image }}:{{ .Values.dispatch.tag }}"
+        ports:
+        - containerPort: 8080
 
