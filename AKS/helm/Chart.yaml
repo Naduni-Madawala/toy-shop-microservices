@@ -1,7 +1,6 @@
 apiVersion: v2
 name: toy-shop
-description: Toy Shop Microservices (AKS)
+description: Toy Shop microservices inspired by Robot-Shop
 type: application
 version: 1.0.0
 appVersion: "1.0"
-
