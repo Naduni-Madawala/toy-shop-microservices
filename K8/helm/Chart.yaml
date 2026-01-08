@@ -1,1 +1,7 @@
+apiVersion: v2
+name: toy-shop
+description: Toy Shop microservices Helm chart (Robot-Shop inspired)
+type: application
+version: 1.0.0
+appVersion: "1.0"
 
