@@ -1,1 +1,52 @@
+namespace: toyshop
+
+global:
+  imagePullPolicy: IfNotPresent
+
+catalogue:
+  image: naduni/toy-catalogue
+  tag: latest
+  replicas: 2
+
+cart:
+  image: naduni/toy-cart
+  tag: latest
+  replicas: 1
+
+user:
+  image: naduni/toy-user
+  tag: latest
+
+payment:
+  image: naduni/toy-payment
+  tag: latest
+
+ratings:
+  image: naduni/toy-ratings
+  tag: latest
+
+dispatch:
+  image: naduni/toy-dispatch
+  tag: latest
+
+shipping:
+  image: naduni/toy-shipping
+  tag: latest
+
+web:
+  image: naduni/toy-web
+  tag: latest
+
+mongo:
+  image: mongo:6
+
+mysql:
+  image: mysql:8
+  rootPassword: rootpass
+
+redis:
+  image: redis:7
+
+rabbitmq:
+  image: rabbitmq:3-management
 
