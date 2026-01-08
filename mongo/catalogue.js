@@ -15,7 +15,7 @@ db.products.insertMany([
     image: "BMW.jpg"
   },
   {
-    name: "Ford Mustang Shelby GT500 White with Blue Stripes ",
+    name: "Ford Mustang Shelby GT500 White with Blue Stripes",
     category: "cars",
     price: 6800,
     image: "Mustang.jpg"
