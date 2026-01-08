@@ -1,0 +1,17 @@
+{
+  "id": "/toyshop/mysql",
+  "cpus": 0.5,
+  "mem": 512,
+  "instances": 1,
+  "env": {
+    "MYSQL_ROOT_PASSWORD": "rootpass"
+  },
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "mysql:8",
+      "network": "BRIDGE",
+      "portMappings": [{ "containerPort": 3306, "hostPort": 0 }]
+    }
+  }
+}
