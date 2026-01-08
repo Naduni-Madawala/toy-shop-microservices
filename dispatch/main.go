@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	amqp "github.com/rabbitmq/amqp091-go"
+	"github.com/rabbitmq/amqp091-go"
 )
 
 func main() {
@@ -16,13 +16,13 @@ func main() {
 
 	conn, err := amqp.Dial("amqp://guest:guest@" + rabbitHost + ":5672/")
 	if err != nil {
-		log.Fatal("Failed to connect to RabbitMQ:", err)
+		log.Fatal("❌ Failed to connect to RabbitMQ:", err)
 	}
 	defer conn.Close()
 
 	ch, err := conn.Channel()
 	if err != nil {
-		log.Fatal("Failed to open channel:", err)
+		log.Fatal("❌ Failed to open channel:", err)
 	}
 	defer ch.Close()
 
@@ -35,7 +35,7 @@ func main() {
 		nil,
 	)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("❌ Queue declare failed:", err)
 	}
 
 	msgs, err := ch.Consume(
@@ -48,7 +48,7 @@ func main() {
 		nil,
 	)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("❌ Consume failed:", err)
 	}
 
 	fmt.Println("📦 Dispatch service waiting for toy orders...")
@@ -57,4 +57,3 @@ func main() {
 		fmt.Println("🚚 Dispatching toy order:", string(msg.Body))
 	}
 }
-
