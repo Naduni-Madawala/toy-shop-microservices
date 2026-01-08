@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: shipping
 spec:
-  replicas: {{ .Values.cart.replicas }}
+  replicas: {{ .Values.shipping.replicas }}
   selector:
     matchLabels:
       app: shipping
@@ -17,3 +17,4 @@ spec:
         image: "{{ .Values.shipping.image }}:{{ .Values.shipping.tag }}"
         ports:
         - containerPort: 8080
+
