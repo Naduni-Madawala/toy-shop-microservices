@@ -1,1 +1,15 @@
+{
+  "id": "/toyshop/cart",
+  "cpus": 0.2,
+  "mem": 256,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "naduni/toy-cart:latest",
+      "network": "BRIDGE",
+      "portMappings": [{ "containerPort": 8080, "hostPort": 0 }]
+    }
+  }
+}
 
