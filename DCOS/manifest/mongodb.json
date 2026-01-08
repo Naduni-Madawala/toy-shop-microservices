@@ -1,0 +1,14 @@
+{
+  "id": "/toyshop/mongodb",
+  "cpus": 0.3,
+  "mem": 512,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "mongo:6",
+      "network": "BRIDGE",
+      "portMappings": [{ "containerPort": 27017, "hostPort": 0 }]
+    }
+  }
+}
