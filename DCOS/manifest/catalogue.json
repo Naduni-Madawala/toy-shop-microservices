@@ -1,1 +1,15 @@
+{
+  "id": "/toyshop/catalogue",
+  "cpus": 0.3,
+  "mem": 256,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "naduni/toy-catalogue:latest",
+      "network": "BRIDGE",
+      "portMappings": [{ "containerPort": 8080, "hostPort": 0 }]
+    }
+  }
+}
 
