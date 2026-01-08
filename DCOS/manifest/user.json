@@ -1,0 +1,14 @@
+{
+  "id": "/toyshop/user",
+  "cpus": 0.2,
+  "mem": 256,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "naduni/toy-user:latest",
+      "network": "BRIDGE",
+      "portMappings": [{ "containerPort": 8080, "hostPort": 0 }]
+    }
+  }
+}
