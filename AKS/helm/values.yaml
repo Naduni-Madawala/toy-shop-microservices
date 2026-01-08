@@ -1,1 +1,17 @@
+namespace: toyshop
+
+catalogue:
+  image: naduni/toy-catalogue
+  tag: latest
+  replicas: 2
+
+cart:
+  image: naduni/toy-cart
+  tag: latest
+  replicas: 1
+
+web:
+  image: naduni/toy-web
+  tag: latest
+  replicas: 1
 
