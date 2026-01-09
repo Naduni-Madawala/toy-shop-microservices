@@ -4,14 +4,19 @@ metadata:
   name: mysql
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
   template:
+    metadata:
+      labels:
+        app: mysql
     spec:
       containers:
       - name: mysql
         image: {{ .Values.mysql.image }}
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: {{ .Values.mysql.rootPassword }}
+          value: {{ .Values.mysql.rootPassword | quote }}
         ports:
         - containerPort: 3306
-
