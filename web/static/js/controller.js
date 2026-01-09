@@ -9,6 +9,11 @@ app.controller("MainController", function ($scope, $http) {
     message: "",
     orderHistory: []
   };
+  
+  $scope.selectProduct = function (product) {
+  $scope.data.selectedProduct = product;
+};
+
 
   /* ---------------- CATALOGUE ---------------- */
   $scope.loadCatalogue = function () {
