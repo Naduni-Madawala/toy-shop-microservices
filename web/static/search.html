@@ -1,1 +1,7 @@
-
+<div ng-controller="MainController">
+  <h2>Search Products</h2>
+  <input ng-model="query" placeholder="Search toys">
+  <div ng-repeat="p in data.products | filter:query">
+    {{ p.name }} – LKR {{ p.price }}
+  </div>
+</div>
