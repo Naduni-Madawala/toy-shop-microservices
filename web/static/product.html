@@ -1,3 +1,19 @@
-<h2>Product Details</h2>
-<p>Coming soon</p>
+<div ng-controller="MainController">
+  <h2>Product Details</h2>
 
+  <div ng-if="data.selectedProduct">
+    <img ng-src="images/{{data.selectedProduct.category}}/{{data.selectedProduct.image}}"
+         width="200">
+
+    <h3>{{ data.selectedProduct.name }}</h3>
+    <p>Price: LKR {{ data.selectedProduct.price }}</p>
+
+    <button ng-click="addToCart(data.selectedProduct)">
+      Add to Cart
+    </button>
+  </div>
+
+  <div ng-if="!data.selectedProduct">
+    <p>Select a product from the catalogue.</p>
+  </div>
+</div>
