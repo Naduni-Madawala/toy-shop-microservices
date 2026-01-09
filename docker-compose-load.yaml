@@ -1,1 +1,7 @@
+version: "3.8"
 
+services:
+  load-gen:
+    image: naduni/toy-loadgen
+    depends_on:
+      - web
