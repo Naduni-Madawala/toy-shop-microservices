@@ -4,10 +4,9 @@ metadata:
   name: toyshop-binding
 subjects:
 - kind: ServiceAccount
-  name: toyshop-sa
-  namespace: {{ .Values.namespace }}
+  name: toyshop
+  namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
-  name: toyshop-role
+  name: toy-shop-role
   apiGroup: rbac.authorization.k8s.io
-
