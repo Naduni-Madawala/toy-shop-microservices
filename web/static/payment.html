@@ -1,3 +1,5 @@
-<h2>Payment</h2>
-<p>Secure payment processing…</p>
-
+<div ng-controller="MainController">
+  <h2>Payment</h2>
+  <p>Total: LKR {{ data.cart.total }}</p>
+  <button ng-click="pay()">Pay Now</button>
+</div>
