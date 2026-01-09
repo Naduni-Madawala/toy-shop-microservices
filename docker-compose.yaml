@@ -1,1 +1,73 @@
 
+---
+
+## 🐳 `docker-compose.yaml` (MAIN LOCAL STACK)
+
+This is **critical**.
+
+```yaml
+version: "3.8"
+
+services:
+
+  web:
+    image: naduni/toy-web
+    ports:
+      - "8080:80"
+    depends_on:
+      - catalogue
+      - cart
+      - user
+      - payment
+      - shipping
+
+  catalogue:
+    image: naduni/toy-catalogue
+    depends_on:
+      - mongo
+
+  cart:
+    image: naduni/toy-cart
+    depends_on:
+      - redis
+
+  user:
+    image: naduni/toy-user
+
+  payment:
+    image: naduni/toy-payment
+    depends_on:
+      - rabbitmq
+
+  dispatch:
+    image: naduni/toy-dispatch
+    depends_on:
+      - rabbitmq
+
+  shipping:
+    image: naduni/toy-shipping
+    depends_on:
+      - mysql
+
+  ratings:
+    image: naduni/toy-ratings
+    depends_on:
+      - mysql
+
+  mongo:
+    image: mongo:6
+
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+
+  redis:
+    image: redis:7
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
+
