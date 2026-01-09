@@ -1,1 +1,9 @@
+node_modules/
+vendor/
+target/
+.env
+.DS_Store
+.idea/
+.vscode/
+*.log
 
