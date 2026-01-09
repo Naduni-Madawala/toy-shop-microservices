@@ -1,3 +1,9 @@
-<h2>Shipping</h2>
-<p>Shipping cost calculation in progress…</p>
+<div ng-controller="MainController">
+  <h2>Shipping</h2>
+  <button ng-click="getShipping()">Calculate Shipping</button>
 
+  <div ng-if="data.shipping">
+    <p>Status: {{ data.shipping.status }}</p>
+    <p>Cost: LKR {{ data.shipping.cost }}</p>
+  </div>
+</div>
