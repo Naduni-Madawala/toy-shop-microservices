@@ -49,3 +49,8 @@ redis:
 rabbitmq:
   image: rabbitmq:3-management
 
+psp:
+  enabled: true
+
+  
+
