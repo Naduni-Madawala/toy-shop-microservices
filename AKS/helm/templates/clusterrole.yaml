@@ -3,7 +3,6 @@ kind: ClusterRole
 metadata:
   name: toyshop-role
 rules:
-  - apiGroups: [""]
-    resources: ["pods","services","endpoints"]
-    verbs: ["get","list","watch"]
-
+- apiGroups: [""]
+  resources: ["pods","services","endpoints"]
+  verbs: ["get","list","watch"]
