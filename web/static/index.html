@@ -8,15 +8,16 @@
 </head>
 
 <body ng-controller="MainController">
+
 <header>
   <h1>🧸 Toy Shop</h1>
   <p>Model Cars & Anime Figures</p>
 </header>
 
-<div class="product" ng-repeat="p in products">
+<div class="product" ng-repeat="p in data.products">
   <img ng-src="images/{{p.category}}/{{p.image}}">
-  <h3>{{p.name}}</h3>
-  <p>LKR {{p.price}}</p>
+  <h3>{{ p.name }}</h3>
+  <p>LKR {{ p.price }}</p>
   <button ng-click="addToCart(p)">Add to Cart</button>
 </div>
 
