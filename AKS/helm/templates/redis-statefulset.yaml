@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: redis
+  labels:
+    app: redis
 spec:
   serviceName: redis
   replicas: 1
@@ -16,6 +18,19 @@ spec:
       containers:
       - name: redis
         image: {{ .Values.redis.image }}
+        imagePullPolicy: {{ .Values.global.imagePullPolicy }}
         ports:
         - containerPort: 6379
-
+        volumeMounts:
+        - name: data
+          mountPath: /mnt/redis
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      storageClassName: default
+      resources:
+        requests:
+          storage: 1Gi
