@@ -1,3 +1,13 @@
-<h2>Your Cart</h2>
-<p>Items added to cart will appear here.</p>
+<div ng-controller="MainController">
+  <h2>Your Cart</h2>
 
+  <ul>
+    <li ng-repeat="item in data.cart.items">
+      {{ item.name }} – LKR {{ item.price }}
+    </li>
+  </ul>
+
+  <h3>Total: LKR {{ data.cart.total }}</h3>
+
+  <button ng-click="pay()">Proceed to Payment</button>
+</div>
