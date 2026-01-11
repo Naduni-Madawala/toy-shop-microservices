@@ -2,36 +2,36 @@ global:
   imagePullPolicy: IfNotPresent
 
 catalogue:
-  image: naduni/toy-catalogue
+  image: nadunimadawala/toy-catalogue
   tag: latest
   replicas: 2
 
 cart:
-  image: naduni/toy-cart
+  image: nadunimadawala/toy-cart
   tag: latest
 
 user:
-  image: naduni/toy-user
+  image: nadunimadawala/toy-user
   tag: latest
 
 payment:
-  image: naduni/toy-payment
+  image: nadunimadawala/toy-payment
   tag: latest
 
 ratings:
-  image: naduni/toy-ratings
+  image: nadunimadawala/toy-ratings
   tag: latest
 
 dispatch:
-  image: naduni/toy-dispatch
+  image: nadunimadawala/toy-dispatch
   tag: latest
 
 shipping:
-  image: naduni/toy-shipping
+  image: nadunimadawala/toy-shipping
   tag: latest
 
 web:
-  image: naduni/toy-web
+  image: nadunimadawala/toy-web
   tag: latest
 
 mongo:

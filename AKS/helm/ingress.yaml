@@ -1,9 +1,10 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: toyshop-ingress
+  namespace: toy-shop
+  name: toy-shop
 spec:
-  ingressClassName: nginx
+  ingressClassName: azure-application-gateway
   rules:
     - http:
         paths:
@@ -13,5 +14,5 @@ spec:
               service:
                 name: web
                 port:
-                  number: 80
+                  number: 8080
 
