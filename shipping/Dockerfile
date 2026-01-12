@@ -7,7 +7,7 @@ RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:17-jre
 WORKDIR /app
-COPY --from=build /app/target/shipping.jar shipping.jar
+COPY COPY --from=build /app/target/shipping-1.0.0.jar shipping.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","shipping.jar"]
 
