@@ -49,3 +49,10 @@ rabbitmq:
 
 psp:
   enabled: true
+
+rbac:
+  enabled: false
+
+imagePullSecrets:
+  - name: dockerhub-secret
+  
