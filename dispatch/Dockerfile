@@ -1,5 +1,8 @@
 FROM golang:1.21-alpine
 
+# Install git (REQUIRED for go get)
+RUN apk add --no-cache git
+
 WORKDIR /go/src/dispatch
 
 # Copy source code
