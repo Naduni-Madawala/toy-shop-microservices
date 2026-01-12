@@ -5,6 +5,14 @@
 
   <modelVersion>4.0.0</modelVersion>
 
+  <!-- ✅ REQUIRED -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.2.1</version>
+    <relativePath/>
+  </parent>
+
   <groupId>com.naduni.toyshop</groupId>
   <artifactId>shipping</artifactId>
   <version>1.0.0</version>
@@ -12,7 +20,6 @@
 
   <properties>
     <java.version>17</java.version>
-    <spring.boot.version>3.2.1</spring.boot.version>
   </properties>
 
   <dependencies>
@@ -29,6 +36,7 @@
     <dependency>
       <groupId>com.mysql</groupId>
       <artifactId>mysql-connector-j</artifactId>
+      <scope>runtime</scope>
     </dependency>
   </dependencies>
 
@@ -37,11 +45,9 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <configuration>
-          <finalName>shipping</finalName>
-        </configuration>
       </plugin>
     </plugins>
   </build>
 
 </project>
+
